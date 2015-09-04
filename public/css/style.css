@@ -1,0 +1,127 @@
+#contact-form {
+    width: 500px;
+    margin: 0px auto;
+    padding: 40px 40px 35px 40px;
+    border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 5px 5px;
+
+}
+
+input[type="text"] {
+    display: inline;
+    width: 400px;
+    font-size: 14px;
+    
+    font-family: 'Lato';
+    
+    padding: 5px 0px 5px 10px;
+    margin: 5px 0px 5px 0px;
+    border-radius: 3px;
+    -moz-border-radius: 5px;
+}
+
+.inputfield {
+    padding-top: 0px;
+    font-weight: 400;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+    font-weight: 300;
+}
+
+input1[type="submit"]{
+    display: inline;
+    width: 410px;
+    font-size: 14px;
+    background-color:#b04555;
+    color: #fff;
+    padding: 0px 0px;
+    margin: 10px 0px 0px 0px;
+    border-radius: 3px;
+    -moz-border-radius: 5px;
+}
+
+input1[type="submit"]:hover {
+    background-color:#777;
+}
+
+textarea {
+    display: inline;
+    width: 400px;
+    max-width: 400px;
+    height: 100px;
+    max-height: 300px;
+    font-size: 14px;
+    background-color:#9EcDDF;
+    color:#fff;
+    padding: 5px 0px 5px 10px;
+    margin: 5px 0px 0px 0px;
+    border-radius: 3px;
+    -moz-border-radius: 5px;
+}
+/* Centres the form within the page */
+form 
+{
+    margin:0 auto;
+    width:459px;
+}
+
+/* Styles the text boxes */
+input, textarea, file {
+    width:439px;
+    height:27px;
+    background-color:#efefef;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border:1px solid #dedede;
+    padding:10px;
+    margin-top:3px;
+    font-size:0.9em;
+    color:#3a3a3a;
+}
+
+input1:focus, textarea:focus {
+    border:1px solid #97d6eb;
+}
+
+/* Styles the text area boxes (message field) */	
+textarea 
+{
+    height:213px;
+    background-color: #efefef;
+}
+
+
+/* Styles the submit button */
+.form-group input {
+    /* background:url(images/submit.png); */
+    background:#b04555;
+    text-align: center;
+    color:#fff;
+    /* text-indent:-9999px; */
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+    width:100px; 
+    float: left;
+  
+}
+
+/* Styles the submit hover */	
+.form-group input:hover {
+    color:#fff;
+    background-color: #4d4d4d;
+    opacity:0.9;
+}
+fieldset
+{   background: #dddddd;
+    border:2px solid gray;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;	
+    border-radius:8px;	
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+/* Styles the cancel button*/	

@@ -1,0 +1,136 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('' . $this->translate('Brothers for all'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php
+        echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                ->prependStylesheet($this->basePath() . '/css/style_1.css')
+                ->prependStylesheet($this->basePath() . '/css/About.css')
+                ->prependStylesheet($this->basePath() . '/css/bootstrap-theme.min.css')
+        ?>
+
+        <!-- Scripts -->
+
+    </head>
+    <body>
+        <div class="box">
+            <div id="wrapperHeader">
+                <div id="header">
+                    <img src="../img/logo.png" alt="logo" />
+
+                    <nav>
+                        <ul class="dropdown">
+                            <li><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
+                            <li class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+
+                                    About <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="<?php echo $this->url('about/story') ?>">Story</a></li>
+                                    <li><a href="<?php echo $this->url('about/mission') ?>">Mission</a></li>
+                                    <li><a href="<?php echo $this->url('about/team') ?>">Team</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+
+                                    Get Involved <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+
+                                    <!--<li><a href="<?php echo $this->url('getinvolved/volunteer') ?>">Story</a></li>-->
+                                    <li><a href="<?php echo $this->url('getinvolved/programs') ?>">Programs</a></li>
+                                    <li><a href="<?php echo $this->url('getinvolved/donate') ?>">Donate</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="<?php echo $this->url('store') ?>"><?php echo $this->translate('Store') ?></a></li>
+                            <li class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+
+                                    Family <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="<?php echo $this->url('family/donors') ?>">Donors</a></li>
+                                    <li><a href="<?php echo $this->url('family/partners') ?>">Partners</a></li>
+                                    <li><a href="<?php echo $this->url('family/gallery') ?>">Gallery</a></li>
+                                    <li><a href="<?php echo $this->url('family/advisors') ?>">Tech Advisors</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="<?php echo $this->url('contactus') ?>"><?php echo $this->translate('Contact Us') ?></a></li>
+                        </ul>
+
+                    </nav>
+                    <section>
+                        <div class="about_col_left">
+                            <img src="../images/prisoners2.jpg"  width="500" height="400"/>
+                        </div>
+                        <div class="about_col_right">
+                            <h1>Our mission</h1>
+                            <p>Brothers for All is a pioneering non profit social enterprise whose mission is to end the cycle of poverty and crime,starting in South Africa.</p>
+
+                            <p>We give offenders,ex-offenders and at-risk youth aspirational technology skills</p>
+                          
+
+                            <p>The organisation is led and driven by inspirational and skilled ex-offenders.</p>
+
+                            <p>Using a model that creates a positive cycle of learning, giving back and inspiring others,</p>
+
+                            <p>the people we train become the next generation of trainers</p>
+
+                            <p>and serve as role models in their communities.</p>
+
+                            <p>To ensure our sustainability,all our students,including offenders,are taught to make recycled paper bead jewellery which is sold to</p>
+
+                            <p>help coverable our costs and support local projects such as orphanages.</p>
+
+
+                        </div>
+                        <div class="clear">
+                    </section>
+                    <footer>
+                        <a href ="https://www.facebook.com/brothersforall?fref=ts" target="_blank"><img src="../img/facebook.png" alt="Mountain View" style="width:30px;height:30px; margin-top :10px;"></a>
+                        <a href ="https://twitter.com/brothersforall" target="_blank"><img src="../img/twitter.png" alt="Mountain View" style="width:30px;height:30px; margin-top :10px;" ></a>
+                        <a href ="https://brosforall.wordpress.com/" target="_blank"><img src="../img/rss-feeds.png" alt="Mountain View" style="width:30px;height:30px; margin-top :10px;" ></a>
+                        <h6>
+                            Brothers for All is part of Mothers for All, a charity registered in South Africa and Botswana.<br>
+                            NPO 081-893; PBO 930037032 (18A); MA 327/2008<br>
+                            Copyright © 2015 Mothers For All. Images licensed under Creative Commons by Formgut, Pham Thi Dieu and Bruno Castro from the Noun Project.
+                        </h6>
+
+                    </footer>
+                </div>
+                <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+                <script src="/js/index.js"></script>
+                <script src="js/jquery-1.9.1.min.js"></script>
+                <script src="js/jquery.slides.min.js"></script>
+                <script>
+                    $(function () {
+                        $("#banner").slidesjs({
+                            width: 720,
+                            height: 450,
+                            play: {
+                                active: true,
+                                auto: true,
+                                interval: 5000,
+                                swap: true
+                            }
+                        });
+                    });
+                </script>
+            </div> 
+        </div>
+

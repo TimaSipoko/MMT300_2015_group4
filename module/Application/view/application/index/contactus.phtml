@@ -1,0 +1,178 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('' . $this->translate('Brothers for all'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php
+        echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                ->prependStylesheet($this->basePath() . '/css/style_1.css')
+                ->prependStylesheet($this->basePath() . '/css/style.css')
+        ?>
+
+        <!-- Scripts -->
+
+    </head>
+    <body>
+        <div class="box">
+            <div id="wrapperHeader">
+                <div id="header">
+                    <img src="img/logo.png" alt="logo" />
+                </div>
+                <nav>
+                    <ul class="dropdown">
+                        <li><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+
+                                About <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                <li><a href="<?php echo $this->url('about/story') ?>">Story</a></li>
+                                <li><a href="<?php echo $this->url('about/mission') ?>">Mission</a></li>
+                                <li><a href="<?php echo $this->url('about/team') ?>">Team</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+
+                                Get Involved <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                <!--<li><a href="<?php echo $this->url('getinvolved/volunteer') ?>">Volunteer</a></li>-->
+                                <li><a href="<?php echo $this->url('getinvolved/programs') ?>">Programs</a></li>
+                                <li><a href="<?php echo $this->url('getinvolved/donate') ?>">Donate</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="<?php echo $this->url('store') ?>"><?php echo $this->translate('Store') ?></a></li>
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+
+                                Family <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                <li><a href="<?php echo $this->url('family/donors') ?>">Donors</a></li>
+                                <li><a href="<?php echo $this->url('family/partners') ?>">Partners</a></li>
+                                <li><a href="<?php echo $this->url('family/gallery') ?>">Gallery</a></li>
+                                <li><a href="<?php echo $this->url('family/advisors') ?>">Tech Advisors</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="<?php echo $this->url('contactus') ?>"><?php echo $this->translate('Contact Us') ?></a></li>
+                    </ul>
+
+                </nav>
+                <section>
+                <fieldset>
+                    <?php
+                    $form = $this->form;
+                    $form->prepare();
+                    ?>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Contact Form</h2>
+
+                            <?php echo $this->form()->openTag($form); ?>
+                            <div class="inputfield">
+                                <?php echo $this->formLabel($form->get('email')); ?>
+                                <?php echo $this->formElement($form->get('email')); ?>
+                                <?php
+                                echo $this->formElementErrors($form->get('email'));
+                                echo "<br/>"
+                                ?>
+                            </div>   
+
+                            <div class="inputfield">
+                                <p class="inputfield">  <?php echo $this->formLabel($form->get('subject')); ?></p>
+                                <p class="inputfield"> <?php echo $this->formElement($form->get('subject')); ?> </p>
+                                <p class="inputfield"> <?php
+                                echo $this->formElementErrors($form->get('subject'));
+                                echo "<br/>"
+                                ?></p>
+                                <a href="../../../src/Application/Controller/IndexController.php"></a>
+                            </div>
+
+                            <div class="inputfield">
+                                <p class="inputfield"><?php echo $this->formLabel($form->get('body')); ?></p>
+                                <p class="inputfield"><?php echo $this->formElement($form->get('body')); ?></p>
+                                <?php
+                                echo $this->formElementErrors($form->get('body'));
+                                echo "<br/>"
+                                ?>
+                            </div>   
+
+
+                            <?php echo $this->formElement($form->get('csrf')); ?>
+
+
+                            <div class="inputfield">
+                                <?php echo $this->formLabel($form->get('captcha')); ?>
+                                <br>
+                                <?php echo $this->formElement($form->get('captcha')); ?>
+                                <br>
+                                <?php echo $this->formElementErrors($form->get('captcha')); ?>
+                                <br>
+                                <p class="help-block">Enter the letters above as you see them.</p>
+                            </div>
+
+                            <div class="form-group">
+                                <?php
+                                echo $this->formElement($form->get('submit'));
+                                echo "<br/>"
+                                ?>
+                            </div>
+                            <?php echo $this->form()->closeTag(); ?> 
+                        </div>
+                </fieldset>
+                    
+  
+              <footer>
+                    <a href ="https://www.facebook.com/brothersforall?fref=ts" target="_blank"><img src="img/facebook.png" alt="Mountain View" style="width:30px;height:30px; margin-top :10px;"></a>
+                    <a href ="https://twitter.com/brothersforall" target="_blank"><img src="img/twitter.png" alt="Mountain View" style="width:30px;height:30px; margin-top :10px;" ></a>
+                    <a href ="https://brosforall.wordpress.com/" target="_blank"><img src="img/rss-feeds.png" alt="Mountain View" style="width:30px;height:30px; margin-top :10px;" ></a>
+                    <h6>
+                        Brothers for All is part of Mothers for All, a charity registered in South Africa and Botswana.<br>
+                        NPO 081-893; PBO 930037032 (18A); MA 327/2008<br>
+                        Copyright © 2015 Mothers For All. Images licensed under Creative Commons by Formgut, Pham Thi Dieu and Bruno Castro from the Noun Project.
+                    </h6>
+
+                </footer>
+                    </section>
+
+               
+            </div>
+                     </div>
+  
+        
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <script src="/js/index.js"></script>
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.slides.min.js"></script>
+        <script>
+            $(function () {
+                $("#banner").slidesjs({
+                    width: 720,
+                    height: 450,
+                    play: {
+                        active: true,
+                        auto: true,
+                        interval: 5000,
+                        swap: true
+                    }
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
